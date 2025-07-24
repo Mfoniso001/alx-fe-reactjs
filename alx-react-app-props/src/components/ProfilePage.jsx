@@ -1,15 +1,16 @@
 import React from "react";
-import UserInfo from "./UserInfo";
+import UserProfile from "./UserProfile";
 
 function ProfilePage() {
   return (
     <div>
-      <h1>Welcome!</h1>
-      <UserInfo />
+      <h1>Welcome to the Profile Page</h1>
+      <UserProfile />
     </div>
   );
 }
 
 export default ProfilePage;
+
 
 
