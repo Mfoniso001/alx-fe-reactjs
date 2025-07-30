@@ -1,16 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RecipeList from "./components/RecipeList";
-import RecipeDetails from "./components/RecipeDetails";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RecipeList from './components/RecipeList';
+import AddRecipeForm from './components/AddRecipeForm';
+import SearchBar from './components/SearchBar';
 
-function App() {
+const App = () => {
   return (
-    <Router> {/* ✅ This is what the checker is looking for */}
-      <Routes>
-        <Route path="/" element={<RecipeList />} />
-        <Route path="/recipe/:id" element={<RecipeDetails />} />
-      </Routes>
+    <Router>
+      <div className="App">
+        <h1>Recipe Sharing App</h1>
+        <SearchBar />
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/add" element={<AddRecipeForm />} />
+        </Routes>
+      </div>
     </Router>
   );
-}
+};
 
 export default App;
