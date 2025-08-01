@@ -31,8 +31,14 @@ const SearchUser = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter GitHub username"
+          style={{ padding: "0.5rem", fontSize: "1rem" }}
         />
-        <button type="submit">Search</button>
+        <button
+          type="submit"
+          style={{ marginLeft: "0.5rem", padding: "0.5rem 1rem" }}
+        >
+          Search
+        </button>
       </form>
 
       {loading && <p>Loading...</p>}
