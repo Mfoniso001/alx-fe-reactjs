@@ -5,7 +5,8 @@ import autoprefixer from 'autoprefixer';
 export default {
   plugins: [
     postcssImport({
-      filter: (path) => path.endsWith('.css'), // Only process CSS files
+      filter: (path) =>
+        path.endsWith('.css') || path.includes('tailwindcss'), // allow only css & tailwind imports
     }),
     tailwindcss,
     autoprefixer,
